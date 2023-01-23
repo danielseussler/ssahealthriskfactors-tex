@@ -1,0 +1,9 @@
+# ssahealthriskfactors-tex
+
+This repository contains the tex files for my master's thesis at the Department of Statistics, University of Munich, Germany:
+
+*Identification of Health Risk Factors in Developing Countries using Intrinsic Model Selection Approaches*
+
+**Abstract**
+
+In low- and middle-income countries, nationally representative household surveys such as the Demographic and Health Surveys provide a wealth of primary data on health, nutrition, and socio-economic outcomes. For epidemiological studies, the survey data is often drawn upon to identify health risk factors, both at the individual and geographical levels. In practice, the functional form of the risk factors is not known beforehand. For instance, an effect could be linear or non-linear, if included at all. Furthermore, the increased availability of remotely sensed data provides a new data source that can be integrated into the analyses of health conditions but is not necessarily informative. The increased dimensionality of such analyses demands methods of variable selection and model choice, both to remain interpretable and generalise well to future observations. In this thesis, I employ component-wise boosting to identify risk factors of two prevalent health conditions in sub-Saharan Africa. The approach is applied in two case studies, where risk factors of individual-level outcomes of chronic childhood malnutrition and environmental correlates of the geographic prevalence of malaria are modelled. The flexible estimation of linear, non-linear and spatial effects is found to be central in the understanding of both outcomes, even improving on other non-parametric models in terms of predictive capacity. When estimating malaria risk, component-wise boosting allows for response distributions that account for excess variability at the cluster level while being superior in interpretability compared to competing approaches proposed in the literature on predictive disease mapping.
