@@ -1,0 +1,13 @@
+
+main.log
+sections/sections.aux
+*.aux
+*.bbl
+*.blg
+*.bcf
+*.out
+*.gz
+*.xml
+main.toc
+thesis.toc
+thesis.log

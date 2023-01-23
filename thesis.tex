@@ -1,0 +1,136 @@
+\documentclass[11pt, a4paper, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{blindtext}
+\usepackage[english]{babel}
+\usepackage{csquotes, xpatch}
+\usepackage[margin=1.25in]{geometry}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{latexsym, amsmath, amssymb, amsthm, amscd, bbm}
+\usepackage[hyphens]{url}
+\usepackage{epigraph}
+\usepackage{graphicx, svg}
+\usepackage[format=plain, textfont=it]{caption}
+\usepackage{tabularx, colortbl, float}
+\usepackage{booktabs}% http://ctan.org/pkg/booktabs
+    %\newcommand{\tabitem}{~~\llap{\textbullet}~~}
+    \newcommand{\tabitem}{~~\llap{--}~~}
+
+\usepackage[hidelinks]{hyperref}
+\def\sectionautorefname{Section}
+\def\subsectionautorefname{Subsection}
+
+\usepackage{orcidlink}
+\usepackage{footmisc}
+\usepackage[ruled]{algorithm2e}
+
+% font
+\usepackage{libertine}
+\usepackage[scaled=0.8]{FiraMono}
+
+% line break penalty
+\interfootnotelinepenalty=10000
+
+% no indent and new line for each paragraph
+%\usepackage[skip]{parskip}
+
+%show all figures before next subsection
+%\usepackage[section]{placeins} 
+
+% bibliography
+\usepackage[authordate, strict, hyperref=true, bibencoding=inputenc, isbn=false, url=false, doi=true, dashed=false]{biblatex-chicago}
+\ExecuteBibliographyOptions{maxcitenames=3}
+\addbibresource{references.bib}
+\AtBeginBibliography{\footnotesize}
+\AtEveryBibitem{\clearfield{month}}
+\AtEveryBibitem{\clearfield{day}}
+  
+% design of section headers
+\usepackage{titlesec}
+\titleformat{\section}  
+       {\normalfont\bfseries\filcenter}{\thesection}{1em}{}
+\titleformat{\subsection}  
+       {\normalfont\mdseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}    
+       {\normalfont\mdseries\itshape}{\thesubsubsection}{1em}{}
+
+% epigraph design
+\setlength\epigraphwidth{.8\textwidth}
+\setlength\epigraphrule{0pt}
+\renewcommand{\textflush}{flushright}
+
+% Keywords command
+\providecommand{\keywords}[1]
+{
+	\small	
+	\textbf{\textit{Keywords and phrases ---}} #1
+}
+
+% Math helper
+\DeclareMathOperator*{\argmin}{arg\,min} 
+\DeclareMathOperator{\logit}{logit}
+\DeclareMathOperator{\Binomial}{Binomial}
+\DeclareMathOperator{\Beta}{Beta}
+\DeclareMathOperator{\Bernoulli}{Bernoulli}
+
+% document information
+\title{Identification of Health Risk Factors in Developing Countries using Intrinsic Model Selection Approaches}
+\author{Daniel A. Seussler Becerra \orcidlink{0000-0002-1683-1779}}
+\date{Master's thesis\\supervised by Dr. Cornelius Fritz}
+
+\hypersetup{
+	pdftitle={Identification of Health Risk Factors in Developing Countries using Intrinsic Model Selection Approaches},
+	pdfsubject={},
+	pdfauthor={Daniel A. Seussler Becerra},
+	pdfkeywords={}
+}
+
+\begin{document}
+
+\pagenumbering{roman}
+\maketitle
+\vspace{1cm}
+\input{sections/abstract}
+\vfill
+
+\begin{center}
+	Department of Statistics, University of Munich\\
+    January 2023
+\end{center}
+\vfill
+
+\thispagestyle{empty}
+
+\cleardoublepage
+\epigraph{\itshape The idea is to go from numbers to information to understanding.}{---Hans Rosling}
+
+\cleardoublepage
+\setcounter{tocdepth}{2}
+\tableofcontents
+
+\makeatletter
+\def\footnoterule{\relax%
+	\kern-5pt
+	\hbox to \columnwidth{\hfill\vrule width 0.5\columnwidth height 0.4pt\hfill}
+	\kern4.6pt}
+\makeatother
+
+\cleardoublepage
+\pagenumbering{arabic}
+\singlespacing
+\include{sections/sections}
+
+\newpage
+\printbibliography[title=References, heading=bibintoc]
+
+\cleardoublepage
+\begin{refsection}
+\include{sections/supplementary}
+\printbibliography[title=References]
+\end{refsection}
+
+\cleardoublepage
+\include{sections/authorship}
+
+\end{document}
